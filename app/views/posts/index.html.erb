@@ -5,7 +5,7 @@
   <% @posts.each do |post| %>
 
   <div id="post-<%= post.id %>">
-    <b><%= post.title %></b>
+    <b><%= post.title %></b> (<%= "by user=#{post.user.name}" %>)
     <%= post.body %>
     <%= post.created_at %>
     <%= link_to "go show", post_path(post) %>
